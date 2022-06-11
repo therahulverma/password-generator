@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+      <div class="result-container">
+        <span id="result"></span>
+        <button class="btn1" id="clipboard">
+          Copy
+          <!-- <i class="far fa-clipboard"></i> -->
+        </button>
+      </div>
+      <label for="length" class="length">LENGTH</label>
+      <div class="small-container">
+        <center>
+          <span class="small-range">10</span
+          ><input
+            type="range"
+            id="vol"
+            name="vol"
+            min="4"
+            max="15"
+            oninput="showVal(this.value)"
+            onchange="showVal(this.value)"
+            class="range"
+          />
+          <span class="final-range">15</span>
+        </center>
+      </div>
+      <label for="length" class="length">SETTINGS</label>
+      <div class="small-container">
+        <span>Include Uppercase</span>
+        <label class="switch">
+          <input type="checkbox" id="uppper-case" checked />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="small-container">
+        <span>Include Lowercase</span>
+        <label class="switch">
+          <input type="checkbox" id="lower-case" checked />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="small-container">
+        <span>Include Numbers</span>
+        <label class="switch">
+          <input type="checkbox" id="number" checked />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="small-container">
+        <span>Include Symbols</span>
+        <label class="switch">
+          <input type="checkbox" id="symbol" checked />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <button class="btn">GENERATE PASSWORD</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
